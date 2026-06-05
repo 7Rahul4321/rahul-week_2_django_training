@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Student Management System</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-    <h1>Welcome to Student Management System</h1>
+    <div class="box">
 
-    <h2>Student Details</h2>
+        <h1>Student Management System</h1>
 
-    <ul>
-        <li>Rahul</li>
-        <li>Aman</li>
-        <li>Priya</li>
-    </ul>
+        <h2>Student List</h2>
+
+       <table border="1" cellpadding="10">
+
+    <tr>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Year</th>
+    </tr>
+
+    {% for student in students %}
+
+    <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.branch }}</td>
+        <td>{{ student.year }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+       
+       
+
+    </div>
 
 </body>
+
 </html>
