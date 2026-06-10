@@ -19,3 +19,8 @@ def home(request):
     students = Student.objects.all()
 
     return render(request, 'students/home.html', {'students': students})
+def delete_student(request, id):
+    student = Student.objects.get(id=id)
+    student.delete()
+
+    return redirect('/')

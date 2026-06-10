@@ -59,18 +59,24 @@
 
         <table>
     <tr>
+        <th>ID</th>
         <th>Name</th>
         <th>Branch</th>
         <th>Year</th>
+        <th>Action</th>
     </tr>
 
     {% for student in students %}
 
     <tr>
-        <td>{{ student.name }}</td>
-        <td>{{ student.branch }}</td>
-        <td>{{ student.year }}</td>
-    </tr>
+    <td>{{ student.id }}</td>
+    <td>{{ student.name }}</td>
+    <td>{{ student.branch }}</td>
+    <td>{{ student.year }}</td>
+    <td>
+        <a href="/delete/{{ student.id }}/">Delete</a>
+    </td>
+</tr>
 
     {% endfor %}
 
