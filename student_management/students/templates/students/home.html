@@ -37,10 +37,27 @@
 
         <h1>Student Management System</h1>
 
+        <h2>Add Student</h2>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <input type="text" name="name" placeholder="Enter Name" required>
+
+            <input type="text" name="branch" placeholder="Enter Branch" required>
+
+            <input type="number" name="year" placeholder="Enter Year" required>
+
+            <button type="submit">Add Student</button>
+
+        </form>
+
+        <br><br>
+
         <h2>Student List</h2>
 
-       <table border="1" cellpadding="10">
-
+        <table>
     <tr>
         <th>Name</th>
         <th>Branch</th>
