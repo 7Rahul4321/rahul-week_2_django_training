@@ -24,3 +24,17 @@ def delete_student(request, id):
     student.delete()
 
     return redirect('/')
+def update_student(request, id):
+
+    student = Student.objects.get(id=id)
+
+    if request.method == "POST":
+        student.name = request.POST['name']
+        student.branch = request.POST['branch']
+        student.year = request.POST['year']
+
+        student.save()
+
+        return redirect('/')
+
+    return render(request, 'students/update.html', {'student': student})

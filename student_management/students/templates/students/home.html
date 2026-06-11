@@ -74,8 +74,10 @@
     <td>{{ student.branch }}</td>
     <td>{{ student.year }}</td>
     <td>
-        <a href="/delete/{{ student.id }}/">Delete</a>
-    </td>
+    <a href="/update/{{ student.id }}/">Update</a>
+    |
+    <a href="/delete/{{ student.id }}/">Delete</a>
+</td>
 </tr>
 
     {% endfor %}

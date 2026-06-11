@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+</head>
+<body>
+
+    <h1>Update Student</h1>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <input type="text" name="name" value="{{ student.name }}" required>
+
+        <input type="text" name="branch" value="{{ student.branch }}" required>
+
+        <input type="number" name="year" value="{{ student.year }}" required>
+
+        <button type="submit">Update Student</button>
+
+    </form>
+
+</body>
+</html>
